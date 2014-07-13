@@ -1,17 +1,16 @@
 {
-    "title": "Title for my theme",
-    "name": "boilerplate",
-    "description": "My Awesome Theme for Brackets",
+    "title": "Delkos Dark Theme",
+    "name": "delkos",
+    "description": "A dark, elegant, easy readable theme.",
     "version": "0.0.1",
-    "author": "Your Name <youremail@gmail.com>",
-    "homepage": "https://github.com/Brackets-Themes/BoilerPlate",
+    "author": "David Sánchez i Gregori",
+    "homepage": "https://github.com/David5i6/Brackets-Delkos-Dark-Theme",
     "repository": {
         "type": "git",
-        "url": "git://github.com/Brackets-Themes/BoilerPlate.git"
+        "url": "git://github.com/David5i6/Brackets-Delkos-Dark-Theme.git"
     },
     "engines": {
-        "brackets": ">=0.41.0"
+        "brackets": ">=0.42.0"
     },
-    "theme": "main.less",
-    "screenshot": "screenshot.png"
+    "theme": "main.less"
 }

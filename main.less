@@ -1,20 +1,261 @@
-.CodeMirror-scroll {
-    padding-left: 2px;
-    background-color: #696969;
+/* Delkos theme by David Sánchez i Gregori
+ * Licensed under BSD-License
+ */
+
+
+// Brackets-specific default font and color definitions
+@import url("brackets_colors.less");
+
+// Default theme -- all UI styling comes from variables in a theme
+// Themes can rely on variables defined above
+@import url("brackets_theme_default.less");
+
+// Include Codemirror styling overrides so that we can overrides proper values
+// for the theme.  If you need to customize the tree, you also include jsTree.less
+// and even brackets_scrollbars.less
+@import url("brackets_codemirror_override.less");
+
+// Background colors:
+@background-color-1: #000;
+@background-color-2: #111;
+@background-color-3: #222;
+
+// Foreground colors:
+@content-color: #f8f8f8;
+@content-color-stronger: #fafafa;
+@content-color-weaker: #efefef;
+
+/* Code Styling */
+
+/* code accent colors */
+/* Some plugins colud use these colors, note that they're intentionally slightly different from the ones used in the hack section */
+@accent-keyword: #80b3ff;
+@accent-atom: #e891ff;
+@accent-comment: #95927e;
+@accent-qualifier: #eee;
+@accent-number: #ff3f3f;
+@accent-property: #c7e58a;
+@accent-attribute: #8ae5c9;
+@accent-string: #ffa2ea;
+@accent-string-2: #ff7dd2;
+@accent-variable: #aaeaaa;
+@accent-variable-2: #64eaff;
+@accent-variable-3: #64ffcf;
+
+@accent-def: #ffea00;
+
+@accent-bracket: #f8f8f8;
+
+@accent-tag: #ff6ed9;
+
+@accent-link: #ae81ff;
+
+@accent-error: #f00a0a;
+
+@accent-operator: #fafafa;
+@accent-meta: #f0f0f0;
+@accent-builtin: #FFFFFF;
+
+@accent-header: #ff26cd;
+@accent-quote: #eaeaea;
+@accent-hr: #ff6c00;
+
+@accent-rangeinfo: #db2fff;
+@accent-minus: #fff0f0;
+@accent-plus: #f0fff0;
+
+
+
+
+/* inline editor colors */
+@inline-background-color-1: #222;
+@inline-background-color-2: #333;
+@inline-background-color-3: rgba(0, 0, 0, 0.09);
+
+@inline-color-1: #f0f0f0;
+@inline-color-2: #eaeaea;
+@inline-color-3: #cacaca;
+
+// Selection Line
+@selection-color-focused: #234;
+@selection-color-unfocused: #333;
+
+
+@activeline-bgcolor: rgb(48, 48, 48);
+@activeline-number-bgcolor: rgb(0, 0, 0);
+@matching-bracket: rgba(32, 48, 92, 0.86);
+
+/* Status Bar Colors */
+@status-bar-background-color: #242424;
+@status-bar-border: none;
+@status-bar-text-color: #cfcfcf;
+@status-bar-quiet-text-color: #ACACAC;
+
+// ==============================================================================
+// Hack
+
+.CodeMirror-gutters {background: #2A2A2A; border-right: 1pt solid #2A3A4F;}
+
+
+.code-cursor {
+    border-left: 1pt solid rgb(255, 255, 255) !important;
 }
 
-.CodeMirror-scroll pre * {
-    color: yellow !important;
+ span.cm-keyword {color: #91c0ff;text-shadow: 0 0 1pt #052148;}
+ span.cm-atom {color: #ccaaff;text-shadow: 0 0 2pt #c000aa;}
+ span.cm-comment {color: #95927e;text-shadow: 0 0 2pt #000;}
+
+ span.cm-qualifier {color: #eee;text-shadow: 0 0 2pt #1b2c5c;}
+
+ span.cm-number {color: #ff7272;text-shadow: 0 0 2pt #aa0000;}
+ span.cm-property {color: #c7e58a;text-shadow: 0 0 2pt #021;}
+ span.cm-attribute {color: #8ae5c9;text-shadow: 0 0 2pt #021;}
+
+ span.cm-string {color: #ffa2ea;text-shadow: 0 0 4pt #f01662;}
+ span.cm-string-2 {color: #ff7dd2;text-shadow: 0 0 4pt #f01662;}
+
+ span.cm-variable {color: #aaeaaa;text-shadow: 0 0 2pt #327232;}
+ span.cm-variable-2 {color: #64eaff;text-shadow: 0 0 4pt #0092ff;}
+ span.cm-variable-3 {color: #64ffcf;text-shadow: 0 0 4pt #2898e0;}
+
+ span.cm-def{color: #ffd800;text-shadow: 0 0 .25em rgba(206, 143, 0, 0.79);}
+ span.cm-bracket{color: #f8f8f8;text-shadow: 0 0 2pt #CAEAFF;}
+
+ span.cm-tag {color: #ff61bc;text-shadow: 0 0 2pt #b22878;}
+
+ span.cm-link {color: #ae81ff;text-shadow: 0 0 2pt #004;}
+ span.cm-error {background: #ff3292; color: #f8f8f0;}
+
+
+.CodeMirror-activeline-background {background-color: rgba(0, 0, 0, 0.5) !important;}
+
+.CodeMirror-activeline .CodeMirror-linenumber {
+     background-color: #161616 !important;
+     color:#EAF0FF !important;
+     text-shadow: 0 0 4pt #013;
+     box-shadow: inset -2pt 0 1pt #4AF;
+    -webkit-animation: hilightSLG 2s alternate infinite;
+ }
+
+ .CodeMirror-matchingbracket {
+  color: white !important;
+    box-shadow: 0 0 1em #0AE0FF;
+    border-radius:0.5em;
+    border:1pt solid #00ACF0;
+    background-color: #0AE0FF;
+    -webkit-animation: hilightMB 2s alternate ease-in-out infinite;
+}
+@-webkit-keyframes hilightMB {
+    0%
+    {
+        color:white;
+        background-color:#FF0AE0;
+        border:1pt solid #F000AC;
+        box-shadow: 0 0 1em #FF0AE0;
+    }
+
+    50%
+    {
+        color:white;
+        background-color: transparent;
+        border:1pt solid transparent;
+        box-shadow: 0 0 1em transparent;
+    }
+
+    100%
+    {
+        color:white;
+        background-color:#0AE0FF;
+        border:1pt solid #00ACF0;
+        box-shadow: 0 0 1em #0AE0FF;
+    }
 }
 
-.CodeMirror-linenumber {
-    color: brown !important;
+@-webkit-keyframes hilightSLG {
+    0%
+    {
+        box-shadow: inset -2pt 0 1pt #4AF;
+    }
+
+    100%
+    {
+        box-shadow: inset -2pt 0 1pt #8EF;
+    }
 }
 
-.CodeMirror-cursor {
-    border-left-color: red !important;
+/* Status Bar hack */
+
+#status-bar {
+    background: #242424;
+    border-top: 1pt solid #447799;
+    color: #EAEAEA;
 }
 
-.CodeMirror-matchingbracket {
-    background-color: black;
+#status-info {
+    background-color: #242424;
+    color: #FAFAFA;
+}
+
+#status-file {
+    color: #FAFAFA;
+}
+
+#status-indicators {
+    background: #242424;
+    color: #CFCFCF;
+
+    > div {
+        border-left: 1px solid #000000;
+    }
+}
+
+div.sidebar-selection-triangle {
+    display: none !important;
+}
+
+div.sidebar-selection{
+    box-shadow: 0pt 1pt 1pt #4AF;
+}
+
+/* GIT gutter Hack */
+
+.CodeMirror .brackets-git-gutter-modified{
+    margin-left: 4pt;
+    box-shadow: 0 0 6pt 2pt #ffea00;
+    border-left:1pt solid #ffff00;
+    color:#640;
+    text-shadow: 0 0 2pt #fff;
+}
+
+.CodeMirror .brackets-git-gutter-added{
+    margin-left: 4pt;
+    box-shadow: 0 0 6pt 2pt #27ff00;
+    border-left:1pt solid #00ff00;
+    color:#00A;
+    text-shadow: 0 0 2pt #fff;
+}
+
+.CodeMirror .brackets-git-gutter-removed{
+    margin-left: 4pt;
+    box-shadow: 0 0 6pt 2pt #f00;
+    border-left:1pt solid #ff0000;
+    color:#A00;
+    text-shadow: 0 0 2pt #fff;
+}
+
+.CodeMirror-linenumber.brackets-git-gutter-hover{
+    background-color: #58A;
+}
+
+/* Plugin Toolbar Hacks */
+
+#main-toolbar{
+    background-color: #242424;
+    box-shadow: inset 1pt 0pt 1pt #479;
+}
+
+#main-toolbar:hover{
+    background-color: #303236;
+    box-shadow: inset 1pt 0pt 1pt #7AD;
+    cursor:default;
 }
