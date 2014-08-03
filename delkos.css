@@ -1,5 +1,5 @@
 /* Delkos theme by David Sánchez i Gregori
- * Licensed under BSD-License
+ * Licensed under MIT-License
  */
 
 /* Color for the tokens */
@@ -100,8 +100,7 @@ span.cm-plus {
 }
 
 /*
-// ==============================================================================
-// Hack global editor
+ Hack global editor
 */
 
 .CodeMirror {
@@ -241,31 +240,4 @@ div.sidebar-selection {
 }
 .CodeMirror-linenumber.brackets-git-gutter-hover {
     background-color: #58A;
-}
-
-/* Plugin Toolbar Hacks */
-
-#main-toolbar {
-    background-color: #242424 !important;
-    box-shadow: inset 1pt 0pt 1pt #479 !important;
-}
-#main-toolbar:hover {
-    background-color: #303236 !important;
-    box-shadow: inset 1pt 0pt 1pt #7AD !important;
-    cursor: default;
-}
-
-/*
-// Status Bar Colors 
-@status-bar-background-color: #242424;
-@status-bar-border: none;
-@status-bar-text-color: #cfcfcf;
-@status-bar-quiet-text-color: #ACACAC;
-*/
-#status-bar{
-    background: #242424 !mportant;
-}
-
-#status-bar #status-indicators{
-    background: #242424 !mportant;
 }
