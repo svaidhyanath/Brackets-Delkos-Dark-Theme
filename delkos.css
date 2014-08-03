@@ -1,0 +1,271 @@
+/* Delkos theme by David Sánchez i Gregori
+ * Licensed under BSD-License
+ */
+
+/* Color for the tokens */
+span.cm-keyword {
+    color: #91c0ff;
+    text-shadow: 0 0 1pt #052148;
+}
+span.cm-atom {
+    color: #ccaaff;
+    text-shadow: 0 0 2pt #c000aa;
+}
+span.cm-comment {
+    color: #95927e;
+    text-shadow: 0 0 2pt #000;
+}
+span.cm-qualifier {
+    color: #eee;
+    text-shadow: 0 0 2pt #1b2c5c;
+}
+span.cm-number {
+    color: #ff7272;
+    text-shadow: 0 0 2pt #aa0000;
+}
+span.cm-property {
+    color: #c7e58a;
+    text-shadow: 0 0 2pt #021;
+}
+span.cm-attribute {
+    color: #8ae5c9;
+    text-shadow: 0 0 2pt #021;
+}
+span.cm-string {
+    color: #ffa2ea;
+    text-shadow: 0 0 4pt #f01662;
+}
+span.cm-string-2 {
+    color: #ff7dd2;
+    text-shadow: 0 0 4pt #f01662;
+}
+span.cm-variable {
+    color: #aaeaaa;
+    text-shadow: 0 0 2pt #327232;
+}
+span.cm-variable-2 {
+    color: #64eaff;
+    text-shadow: 0 0 4pt #0092ff;
+}
+span.cm-variable-3 {
+    color: #64ffcf;
+    text-shadow: 0 0 4pt #2898e0;
+}
+span.cm-def {
+    color: #ffd800;
+    text-shadow: 0 0 .25em rgba(206, 143, 0, 0.79);
+}
+span.cm-bracket {
+    color: #f8f8f8;
+    text-shadow: 0 0 2pt #CAEAFF;
+}
+span.cm-tag {
+    color: #ff61bc;
+    text-shadow: 0 0 2pt #b22878;
+}
+span.cm-link {
+    color: #ae81ff;
+    text-shadow: 0 0 2pt #004;
+}
+span.cm-error {
+    background: #ff3292;
+    color: #f8f8f0;
+}
+span.cm-operator {
+    color: #fafafa;
+}
+span.cm-meta {
+    color: #f0f0f0;
+}
+span.cm-builtin {
+    color: #ffffff;
+}
+span.cm-header {
+    color: #ff26cd;
+}
+span.cm-quote {
+    color: #eaeaea;
+}
+span.cm-hr {
+    color: #ff6c00;
+}
+span.cm-rangeinfo {
+    color: #db2fff;
+}
+span.cm-minus {
+    color: #fff0f0;
+}
+span.cm-plus {
+    color: #f0fff0;
+}
+
+/*
+// ==============================================================================
+// Hack global editor
+*/
+
+.CodeMirror {
+    background-color: #0A0A0A;
+    color: #f0f0f0;
+}
+.CodeMirror .CodeMirror-scroll {
+    background-color: #161616;
+    color: #cecece;
+}
+
+.CodeMirror-gutters {
+    background: #2A2A2A;
+    border-right: 1pt solid #2A3A4F;
+}
+.CodeMirror-cursor {
+    border-left: 1pt solid rgba(248, 250, 255, .75) !important;
+    border-right: 1pt solid rgba(231, 196, 255,.5) !important;
+}
+
+.CodeMirror-activeline-background {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+
+.CodeMirror-focused .CodeMirror-selected {
+    background-color: #234;
+}
+
+.CodeMirror-selected {
+    background-color: #333;
+}
+
+
+
+.CodeMirror-activeline .CodeMirror-linenumber {
+    background-color: #161616 !important;
+    color: #EAF0FF !important;
+    text-shadow: 0 0 4pt #013;
+    box-shadow: inset -2pt 0 1pt #4AF;
+    -webkit-animation: hilightSLG 2s alternate infinite;
+}
+
+.CodeMirror-matchingbracket {
+    color: white !important;
+    box-shadow: 0 0 1em #0AE0FF;
+    border-radius: 0.5em;
+    border: 1pt solid #00ACF0;
+    background-color: #0AE0FF;
+    -webkit-animation: hilightMB 2s alternate ease-in-out infinite;
+}
+@-webkit-keyframes hilightMB {
+    0% {
+        color: white;
+        background-color: #FF0AE0;
+        border: 1pt solid #F000AC;
+        box-shadow: 0 0 1em #FF0AE0;
+    }
+    50% {
+        color: white;
+        background-color: transparent;
+        border: 1pt solid transparent;
+        box-shadow: 0 0 1em transparent;
+    }
+    100% {
+        color: white;
+        background-color: #0AE0FF;
+        border: 1pt solid #00ACF0;
+        box-shadow: 0 0 1em #0AE0FF;
+    }
+}
+@-webkit-keyframes hilightSLG {
+    0% {
+        box-shadow: inset -2pt 0 1pt #4AF;
+    }
+    100% {
+        box-shadow: inset -2pt 0 1pt #8EF;
+    }
+}
+
+/* Status Bar hack */
+
+#status-bar {
+    background: #242424;
+    border-top: 1pt solid #447799;
+    color: #EAEAEA;
+}
+#status-info {
+    background-color: #242424;
+    color: #FAFAFA;
+}
+#status-file {
+    color: #FAFAFA;
+}
+
+
+#status-indicators {
+    background: #242424;
+    color: #CFCFCF;
+}
+
+#status-indicators > div {
+        border-left: 1px solid #000000;
+}
+
+/* Sidebar HACK */
+
+div.sidebar-selection-triangle {
+    display: none !important;
+}
+div.sidebar-selection {
+    box-shadow: 0pt 1pt 1pt #4AF;
+}
+
+/* GIT gutter Hack */
+
+.CodeMirror .brackets-git-gutter-modified {
+    margin-left: 4pt;
+    box-shadow: 0 0 6pt 2pt #ffea00;
+    border-left: 1pt solid #ffff00;
+    color: #640;
+    text-shadow: 0 0 2pt #fff;
+}
+.CodeMirror .brackets-git-gutter-added {
+    margin-left: 4pt;
+    box-shadow: 0 0 6pt 2pt #27ff00;
+    border-left: 1pt solid #00ff00;
+    color: #00A;
+    text-shadow: 0 0 2pt #fff;
+}
+.CodeMirror .brackets-git-gutter-removed {
+    margin-left: 4pt;
+    box-shadow: 0 0 6pt 2pt #f00;
+    border-left: 1pt solid #ff0000;
+    color: #A00;
+    text-shadow: 0 0 2pt #fff;
+}
+.CodeMirror-linenumber.brackets-git-gutter-hover {
+    background-color: #58A;
+}
+
+/* Plugin Toolbar Hacks */
+
+#main-toolbar {
+    background-color: #242424 !important;
+    box-shadow: inset 1pt 0pt 1pt #479 !important;
+}
+#main-toolbar:hover {
+    background-color: #303236 !important;
+    box-shadow: inset 1pt 0pt 1pt #7AD !important;
+    cursor: default;
+}
+
+/*
+// Status Bar Colors 
+@status-bar-background-color: #242424;
+@status-bar-border: none;
+@status-bar-text-color: #cfcfcf;
+@status-bar-quiet-text-color: #ACACAC;
+*/
+#status-bar{
+    background: #242424 !mportant;
+}
+
+#status-bar #status-indicators{
+    background: #242424 !mportant;
+}
