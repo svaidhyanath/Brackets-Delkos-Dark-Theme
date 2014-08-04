@@ -109,12 +109,19 @@ span.cm-plus {
 }
 .CodeMirror .CodeMirror-scroll {
     background-color: #161616;
-    color: #cecece;
+    color: #eaeaea;
 }
 
-.CodeMirror-gutters {
+
+ .CodeMirror-gutter-elt{
+    background: #2A2A2A;
+    text-shadow: 0 0 3pt #001648;
+ }
+
+.CodeMirror-gutters{
     background: #2A2A2A;
     border-right: 1pt solid #2A3A4F;
+    text-shadow: 0 0 3pt #001648;
 }
 .CodeMirror-cursor {
     border-left: 1pt solid rgba(248, 250, 255, .75) !important;
@@ -144,7 +151,7 @@ span.cm-plus {
     -webkit-animation: hilightSLG 2s alternate infinite;
 }
 
-.CodeMirror-matchingbracket {
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
     color: white !important;
     box-shadow: 0 0 1em #0AE0FF;
     border-radius: 0.5em;
@@ -152,6 +159,8 @@ span.cm-plus {
     background-color: #0AE0FF;
     -webkit-animation: hilightMB 2s alternate ease-in-out infinite;
 }
+
+
 @-webkit-keyframes hilightMB {
     0% {
         color: white;
