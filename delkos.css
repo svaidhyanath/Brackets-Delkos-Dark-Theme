@@ -151,13 +151,20 @@ span.cm-plus {
     -webkit-animation: hilightSLG 2s alternate infinite;
 }
 
-.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+.CodeMirror-matchingbracket {
     color: white !important;
     box-shadow: 0 0 1em #0AE0FF;
     border-radius: 0.5em;
     border: 1pt solid #00ACF0;
     background-color: #0AE0FF;
     -webkit-animation: hilightMB 2s alternate ease-in-out infinite;
+}
+
+.CodeMirror-matchingtag {
+    border-radius: 0.5em;
+    border: 1pt solid #00ACF0;
+    background-color:black;
+    -webkit-animation: hilightMT 2s alternate ease-in-out infinite;
 }
 
 
@@ -179,6 +186,17 @@ span.cm-plus {
         background-color: #0AE0FF;
         border: 1pt solid #00ACF0;
         box-shadow: 0 0 1em #0AE0FF;
+    }
+}
+@-webkit-keyframes hilightMT {
+    0% {
+        border: 1pt solid #F000AC;
+    }
+    50% {
+        border: 1pt solid transparent;
+    }
+    100% {
+        border: 1pt solid #00ACF0;
     }
 }
 @-webkit-keyframes hilightSLG {
