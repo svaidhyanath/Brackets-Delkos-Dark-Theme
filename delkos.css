@@ -148,6 +148,7 @@ span.cm-plus {
     color: #EAF0FF !important;
     text-shadow: 0 0 4pt #013;
     box-shadow: inset -2pt 0 1pt #4AF;
+    transform: translateZ(0);
     -webkit-animation: hilightSLG 2s alternate infinite;
 }
 
@@ -157,6 +158,7 @@ span.cm-plus {
     border-radius: 0.5em;
     border: 1pt solid #00ACF0;
     background-color: #0AE0FF;
+    transform: translateZ(0);
     -webkit-animation: hilightMB 2s alternate ease-in-out infinite;
 }
 
@@ -164,6 +166,7 @@ span.cm-plus {
     border-radius: 0.5em;
     border: 1pt solid #00ACF0;
     background-color:black;
+    transform: translateZ(0);
     -webkit-animation: hilightMT 2s alternate ease-in-out infinite;
 }
 
