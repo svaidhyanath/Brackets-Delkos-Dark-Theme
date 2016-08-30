@@ -1,1 +1,7 @@
-{"name":"Brackets-delkos-dark-theme","tagline":"Boilerplate theme for brackets","body":"Delkos Dark Theme\r\n=================\r\n\r\nThis is a Delkos (me) Dark Theme based (forked) from the theme boilerPlate from Miguel del Castillo.\r\n\r\nThis theme includes a serie of modificatios on syntax higlight and editor elements.\r\nIt also modifies some other extensions elements like git extension.\r\n\r\nIt's aimed to be clear, elegant, consistent, provide easy reading, and of course, to be dark ;-)\r\n\r\n![screenshot](https://raw.githubusercontent.com/David5i6/wiki/master/themes/Delkos%20Dark%20Theme/delkos_dark_theme.png)","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
+{
+  "name": "Brackets-delkos-dark-theme",
+  "tagline": "Boilerplate theme for brackets",
+  "body": "Delkos Dark Theme\r\n=================\r\n\r\nThis is a Delkos (me) Dark Theme based (forked) from the theme boilerPlate from Miguel del Castillo.\r\n\r\nThis theme includes a serie of modificatios on syntax higlight and editor elements.\r\nIt also modifies some other extensions elements like git extension.\r\n\r\nIt's aimed to be clear, elegant, consistent, provide easy reading, and of course, to be dark ;-)\r\n\r\n![screenshot](https://raw.githubusercontent.com/David5i6/wiki/master/themes/Delkos%20Dark%20Theme/delkos_dark_theme.png)",
+  "google": "",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
